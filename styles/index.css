@@ -1,0 +1,173 @@
+@import url(./loader.css);
+@import url(./navbar.css);
+
+/* ==========================
+    A Modern CSS Reset • Josh W. Comeau
+    https://www.joshwcomeau.com/css/custom-css-reset/
+========================== */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* 9. Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ==========================
+    My CSS
+========================== */
+:root {
+  --page-bg-color: #111184;
+  --body-text-color-light: #d4a45e;
+  --body-text-color-dark: #604610;
+  --primary-accent-color: #a1a1ff;
+  --highlight-accent-color: #fff9a1;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+body {
+  background-color: var(--page-bg-color);
+  color: var(--body-text-color-light);
+  display: flex;
+  flex-direction: column;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.loader {
+  color: var(--body-text-color-light);
+}
+
+.content {
+  display: none;
+  gap: 0.5rem;
+}
+
+.content-card {
+  background-color: var(--primary-accent-color);
+  border-radius: 0.5rem;
+  color: var(--body-text-color-dark);
+  max-width: 20rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.content-card.cocktail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.content-card.cocktail > img {
+  border-radius: 0.5rem;
+}
+
+.card-icons {
+  display: flex;
+  gap: 0.125rem;
+  justify-content: flex-end;
+}
+
+.card-icons.search {
+  justify-content: space-between;
+}
+
+.card-icons > span {
+  cursor: pointer;
+}
+
+.card-details {
+  opacity: 0;
+  position: absolute;
+  right: calc(-100% - 0.125rem);
+  top: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  visibility: hidden;
+}
+
+.card-details.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.content-card.search {
+  height: fit-content;
+  margin-left: auto;
+}
+
+.content-card.search > .results > p {
+  cursor: pointer;
+  width: fit-content;
+}

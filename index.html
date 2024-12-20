@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Inlämningsuppgfit Grundläggande Programmering - The Cocktail DB
+    </title>
+    <link href="styles/index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navbar">
+          <ul>
+            <li class="button">
+              <a href="#home">Home</a>
+            </li>
+            <li class="button">
+              <a href="#favorites">Favorites</a>
+            </li>
+          </ul>
+          <div class="search-container">
+            <form>
+              <div class="search-fields">
+                <label for="search-cocktail" class="visually-hidden"
+                  >Cocktail</label
+                >
+                <input
+                  id="search-cocktail"
+                  class="search-input"
+                  type="search"
+                  placeholder="Search for... cocktail"
+                  name="search-cocktail"
+                />
+                <label for="search-category" class="visually-hidden"
+                  >Category</label
+                >
+                <input
+                  id="search-category"
+                  class="search-input additional"
+                  type="search"
+                  placeholder="... category"
+                  name="search-category"
+                />
+                <label for="search-ingredient" class="visually-hidden"
+                  >Ingredient</label
+                >
+                <input
+                  id="search-ingredient"
+                  class="search-input additional"
+                  type="search"
+                  placeholder="... ingredient"
+                  name="search-ingredient"
+                />
+                <label for="search-glass-type" class="visually-hidden"
+                  >Glass Type</label
+                >
+                <input
+                  id="search-glass-type"
+                  class="search-input additional"
+                  type="search"
+                  placeholder="... glass type"
+                  name="search-glass-type"
+                />
+              </div>
+              <span class="button material-symbols-outlined search-expand">
+                keyboard_arrow_down
+              </span>
+              <span class="button material-symbols-outlined search-submit"
+                >search</span
+              >
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="loader"></div>
+      <div class="content"></div>
+      <div id="home">
+        <section class="open" id="home-start-page"></section>
+        <section id="home-details-page"></section>
+        <section id="home-search-page"></section>
+      </div>
+      <div id="favorites">
+        <section id="favorites-start-page"></section>
+      </div>
+    </main>
+    <script src="scripts/index.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+.navbar {
+  display: flex;
+}
+
+.navbar > ul {
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+  padding: 0.25rem 0;
+  padding-inline-start: 0.25rem;
+}
+
+.navbar .button {
+  border: 0.0625rem solid transparent;
+  border-radius: 0.5rem;
+  color: var(--body-text-color-light);
+  cursor: pointer;
+  height: 2.5rem;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.navbar .button:hover,
+.navbar .button:focus {
+  background-color: var(--primary-accent-color);
+  border-color: var(--highlight-accent-color);
+  box-shadow: 0 0 0.5rem 0.25rem var(--highlight-accent-color);
+  color: var(--body-text-color-dark);
+}
+
+.navbar .button > a {
+  color: var(--body-text-color-light);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .button:hover > a {
+  color: var(--body-text-color-dark);
+}
+
+.search-container {
+  margin-left: auto;
+  position: relative;
+}
+
+.search-container > form {
+  display: flex;
+  gap: 1rem;
+  padding: 0.25rem 0.25rem 0.25rem 0;
+}
+
+.search-container .search-expand {
+  border: 0.0625rem solid transparent;
+  border-radius: 0.5rem;
+  color: var(--body-text-color-light);
+  cursor: pointer;
+  height: 2.5rem;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.search-container .search-expand:hover {
+  background-color: var(--primary-accent-color);
+  border-color: transparent;
+  box-shadow: initial;
+  color: var(--body-text-color-dark);
+}
+
+.search-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  height: 2.5rem;
+  position: absolute;
+  right: 6.55rem;
+  top: 0.25rem;
+}
+
+.search-fields > input {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.search-fields > input:focus {
+  outline: none;
+}
+
+.search-input.additional {
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  visibility: hidden;
+}
+
+.search-input.additional.visible {
+  opacity: 1;
+  visibility: visible;
+}
